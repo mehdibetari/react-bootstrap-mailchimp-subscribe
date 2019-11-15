@@ -1,7 +1,7 @@
 import React from "react";
 
 // a basic form
-const SimpleForm = ({ status, message, className, style, onSubmitted }) => {
+const SimpleForm = ({ status, message, onSubmitted }) => {
   let input;
   const submit = () =>
     input &&
@@ -11,26 +11,33 @@ const SimpleForm = ({ status, message, className, style, onSubmitted }) => {
     });
 
   return (
-    <div className={className} style={style}>
-      {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-      {status === "error" && (
-        <div
-          style={{ color: "red" }}
-          dangerouslySetInnerHTML={{ __html: message }}
-        />
-      )}
-      {status === "success" && (
-        <div
-          style={{ color: "green" }}
-          dangerouslySetInnerHTML={{ __html: message }}
-        />
-      )}
-      <input
-        ref={node => (input = node)}
-        type="email"
-        placeholder="Your email"
-      />
-      <button onClick={submit}>Submit</button>
+    <div className="form-row">
+      <div className="col-8">
+        <input
+          ref={node => (input = node)}
+          type="email"
+          placeholder="Votre email"
+          />
+          {status === "sending" && <small style={{ color: "blue" }} className="form-text text-muted">sending...</small>}
+          {status === "error" && (
+            <small
+              style={{ color: "red" }}
+              dangerouslySetInnerHTML={{ __html: message }}
+              className="form-text text-muted"
+            />
+          )}
+          {status === "success" && (
+            <small
+              style={{ color: "green" }}
+              dangerouslySetInnerHTML={{ __html: message }}
+              className="form-text text-muted"
+            />
+          )}
+        {!status && <small id="emailHelp" className="form-text text-muted">Vous recevrez votre invitation 48h avant la vente.</small>}
+      </div>
+      <div className="col">
+        <button onClick={submit} className="btn btn-info">➜</button>
+      </div>
     </div>
   );
 };
