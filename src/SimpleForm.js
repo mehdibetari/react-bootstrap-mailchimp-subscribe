@@ -17,6 +17,8 @@ const SimpleForm = ({ status, message, onSubmitted }) => {
           ref={node => (input = node)}
           type="email"
           placeholder="Votre email"
+          className="form-control"
+          aria-describedby="emailHelp"
           />
           {status === "sending" && <small style={{ color: "blue" }} className="form-text text-muted">sending...</small>}
           {status === "error" && (
