@@ -1,5 +1,5 @@
 /*!
- * react-bootstrap-mailchimp-subscribe v1.0.0 - https://github.com/mehdibetari/react-bootstrap-mailchimp-subscribe
+ * react-bootstrap-mailchimp-subscribe v1.0.3 - https://github.com/mehdibetari/react-bootstrap-mailchimp-subscribe
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -284,6 +284,8 @@ var SimpleForm = function SimpleForm(_ref) {
         },
         type: "email",
         placeholder: "Votre email",
+        className: "form-control",
+        "aria-describedby": "emailHelp",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 16
@@ -294,7 +296,7 @@ var SimpleForm = function SimpleForm(_ref) {
         "small",
         { style: { color: "blue" }, className: "form-text text-muted", __source: {
             fileName: _jsxFileName,
-            lineNumber: 21
+            lineNumber: 23
           },
           __self: _this
         },
@@ -306,7 +308,7 @@ var SimpleForm = function SimpleForm(_ref) {
         className: "form-text text-muted",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 25
         },
         __self: _this
       }),
@@ -316,7 +318,7 @@ var SimpleForm = function SimpleForm(_ref) {
         className: "form-text text-muted",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 32
         },
         __self: _this
       }),
@@ -324,7 +326,7 @@ var SimpleForm = function SimpleForm(_ref) {
         "small",
         { id: "emailHelp", className: "form-text text-muted", __source: {
             fileName: _jsxFileName,
-            lineNumber: 36
+            lineNumber: 38
           },
           __self: _this
         },
@@ -335,7 +337,7 @@ var SimpleForm = function SimpleForm(_ref) {
       "div",
       { className: "col", __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 40
         },
         __self: _this
       },
@@ -343,7 +345,7 @@ var SimpleForm = function SimpleForm(_ref) {
         "button",
         { onClick: submit, className: "btn btn-info", __source: {
             fileName: _jsxFileName,
-            lineNumber: 39
+            lineNumber: 41
           },
           __self: _this
         },

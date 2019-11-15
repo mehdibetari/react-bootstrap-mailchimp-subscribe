@@ -24,7 +24,9 @@ var SimpleForm = function SimpleForm(_ref) {
           return input = node;
         },
         type: "email",
-        placeholder: "Votre email"
+        placeholder: "Votre email",
+        className: "form-control",
+        "aria-describedby": "emailHelp"
       }),
       status === "sending" && React.createElement(
         "small",
