@@ -20,7 +20,7 @@ const SimpleForm = ({ status, message, onSubmitted }) => {
           className="form-control"
           aria-describedby="emailHelp"
           />
-          {status === "sending" && <small style={{ color: "blue" }} className="form-text text-muted">sending...</small>}
+          {status === "sending" && <small style={{ color: "blue" }} className="form-text text-muted">Envoi en cours...</small>}
           {status === "error" && (
             <small
               style={{ color: "red" }}

@@ -39,7 +39,7 @@ class MailchimpSubscribe extends React.Component {
             } else {
               this.setState({
                 status: "success",
-                message: data.msg
+                message: "Merci pour votre inscription"
               });
             }
           }
